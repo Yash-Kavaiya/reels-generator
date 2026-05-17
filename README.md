@@ -21,9 +21,9 @@
 pip install -r requirements.txt
 ```
 
-### 2. Test System
+### Test System
 ```bash
-python test_production.py
+python tests/test_production.py
 ```
 
 ### 3. Create Your First Reel
@@ -81,35 +81,47 @@ ls output/videos/*.mp4 | wc -l
 
 ```
 reels-generator/
-├── main.py                      # Main entry point
-├── test_production.py           # Production tests
-├── config.json                  # Configuration
-├── quotes.json                  # Quote database
-├── requirements.txt             # Dependencies
+├── main.py                     # Main application
+├── config.template.json        # Configuration template
+├── quotes.json                 # Quote database
+├── requirements.txt            # Dependencies
 │
-├── modules/
-│   ├── quote_manager.py         # Quote selection
-│   ├── sarvam_tts.py           # Sarvam AI TTS
-│   ├── tts_generator.py        # TTS with fallback
-│   ├── manim_video_creator.py  # Manim animations
-│   ├── video_creator.py        # MoviePy fallback
-│   ├── batch_processor.py      # Batch processing
-│   ├── retry_handler.py        # Retry logic
-│   └── logger.py               # Logging system
+├── modules/                    # Core modules
+│   ├── quote_manager.py       # Quote selection
+│   ├── sarvam_tts.py          # Sarvam AI TTS
+│   ├── tts_generator.py       # TTS with fallback
+│   ├── manim_video_creator.py # Manim animations
+│   ├── video_creator.py       # MoviePy fallback
+│   ├── batch_processor.py     # Batch processing
+│   ├── retry_handler.py       # Retry logic
+│   └── logger.py              # Logging system
 │
-├── output/
-│   ├── audio/                  # Generated audio
-│   ├── videos/                 # Final videos
-│   ├── temp/                   # Temporary files
-│   └── reports/                # Batch reports
+├── scripts/                    # Utility scripts
+│   ├── run.bat / run.sh       # Quick launchers
+│   ├── scheduler.py           # Automation
+│   └── download_font.py       # Font downloader
 │
-├── logs/                       # Log files
+├── tests/                      # Test files
+│   ├── test_production.py     # Production tests
+│   └── test_setup.py          # Setup tests
 │
-└── docs/
-    ├── PRODUCTION_GUIDE.md     # Production guide
-    ├── FINAL_SYSTEM_STATUS.md  # System status
-    └── UPGRADE_SUMMARY.md      # Upgrade notes
+├── docs/                       # Documentation
+│   ├── 00_file_structure.md   # File structure
+│   ├── 01_project_plan.md     # Project plan
+│   ├── 02_setup_guide.md      # Setup guide
+│   ├── 03_production_guide.md # Production guide
+│   └── ...                    # More docs
+│
+├── output/                     # Generated content
+│   ├── audio/                 # Audio files
+│   ├── videos/                # Final videos
+│   ├── temp/                  # Temporary files
+│   └── reports/               # Batch reports
+│
+└── logs/                       # Log files
 ```
+
+See [docs/00_file_structure.md](docs/00_file_structure.md) for detailed structure.
 
 ## 🔧 Configuration
 
@@ -226,7 +238,7 @@ Edit `quotes.json`:
 
 ### Daily Automation
 ```bash
-python scheduler.py
+python scripts/scheduler.py
 ```
 
 ### Cron Job (Linux/Mac)
@@ -288,9 +300,11 @@ cat output/reports/batch_report_*.json
 
 ## 📚 Documentation
 
-- [PRODUCTION_GUIDE.md](PRODUCTION_GUIDE.md) - Detailed production guide
-- [FINAL_SYSTEM_STATUS.md](FINAL_SYSTEM_STATUS.md) - System status
-- [UPGRADE_SUMMARY.md](UPGRADE_SUMMARY.md) - Upgrade notes
+- [File Structure](docs/00_file_structure.md) - Complete file organization
+- [Setup Guide](docs/02_setup_guide.md) - Quick setup instructions
+- [Production Guide](docs/03_production_guide.md) - Production usage
+- [System Status](docs/04_system_status.md) - Feature overview
+- [Production Ready](docs/06_production_ready.md) - Production summary
 
 ## 🚀 Ready for Production!
 
