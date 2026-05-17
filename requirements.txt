@@ -1,0 +1,10 @@
+moviepy>=2.0.0
+gTTS==2.5.1
+Pillow==10.2.0
+numpy==1.24.3
+google-api-python-client==2.108.0
+google-auth-oauthlib==1.2.0
+schedule==1.2.2
+requests==2.32.3
+sarvamai==0.1.28
+manim==0.18.1

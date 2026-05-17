@@ -1,0 +1,71 @@
+{
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 15,
+    "color_schemes": [
+      {
+        "name": "dark_blue",
+        "background": "#1a1a2e",
+        "text": "#ffffff",
+        "accent": "#FFD700"
+      },
+      {
+        "name": "purple_gold",
+        "background": "#2d1b69",
+        "text": "#ffffff",
+        "accent": "#ffd700"
+      },
+      {
+        "name": "teal_orange",
+        "background": "#0f4c75",
+        "text": "#ffffff",
+        "accent": "#ff6b35"
+      },
+      {
+        "name": "dark_green",
+        "background": "#1b4332",
+        "text": "#ffffff",
+        "accent": "#95d5b2"
+      },
+      {
+        "name": "burgundy",
+        "background": "#641220",
+        "text": "#ffffff",
+        "accent": "#f4978e"
+      }
+    ],
+    "font_size": 70
+  },
+  "audio": {
+    "language": "gu",
+    "tld": "co.in",
+    "slow": false,
+    "use_sarvam": true,
+    "sarvam_api_key": "YOUR_SARVAM_AI_API_KEY_HERE",
+    "sarvam_speakers": ["shubh", "anushka", "abhilash", "manisha"],
+    "sarvam_model": "bulbul:v3",
+    "pace": 1.0,
+    "speech_sample_rate": 48000
+  },
+  "output": {
+    "audio_dir": "output/audio",
+    "video_dir": "output/videos"
+  },
+  "fonts": {
+    "gujarati": "C:\\Windows\\Fonts\\shruti.ttf",
+    "hind_vadodara": "assets/fonts/HindVadodara-Regular.ttf"
+  },
+  "animation": {
+    "use_manim": true,
+    "quality": "high",
+    "background_gradients": [
+      ["#1a1a2e", "#16213e", "#0f3460"],
+      ["#2d1b69", "#3c2a7a", "#4a3a8c"],
+      ["#0f4c75", "#1b6ca8", "#3282b8"],
+      ["#1b4332", "#2d6a4f", "#40916c"],
+      ["#641220", "#9b2226", "#ae2012"]
+    ]
+  }
+}
